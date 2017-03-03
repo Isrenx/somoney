@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.one{width: 100px;height: 20px;background: red}
+		.two{width: 500px;height: 30px;background: black;}
+	</style>
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="one"></div>
+	<div class="two"></div>
+	<script type="text/javascript">
+		var rightWidth=$('.one'),
+		userWidth=$('.two');
+
+		var newValue=get([rightWidth,userWidth]);
+		alert(newValue[0].width()+'  '+newValue[1].width());
+		/*冒泡排序*/
+		function get(arr) {
+		    var len = arr.length;
+		    for (var i = 0; i < len; i++) {
+		        for (var j = 0; j < len - 1 - i; j++) {
+		            if (arr[j].width() > arr[j+1].width() ) {        //相邻元素两两对比
+		                var temp = arr[j+1];        //元素交换
+		                arr[j+1] = arr[j];
+		                arr[j] = temp;
+		            }
+		        }
+		    }
+		    return arr;
+		}
+	</script>
+</body>
+<ml>

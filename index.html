@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>中国人的前途</title>
+    <script>
+        var isClick = true;
+        var isCheck = false;
+        var isLoad = false;
+        var scale;
+        (function(psdw){
+            var dpr, rem;
+            var docEl = document.documentElement;
+            var fontEl = document.createElement('style');
+            scale = docEl.clientWidth / psdw;
+            scale = scale>1?1:scale;
+            rem = psdw/10;
+            rem = rem*scale;
+            // 动态写入样式
+            docEl.firstElementChild.appendChild(fontEl);
+            fontEl.innerHTML = 'html,body{font-size:' + rem + 'px!important;}';
+            dpr = window.devicePixelRatio || 1;
+            docEl.setAttribute('data-dpr', dpr);
+        })(640);
+
+    </script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper-3.4.1.min.css">
+    <!-- <script src="js/index.js"></script>
+    <script src="js/Preload.js"></script>
+    <script src="js/onload.js"></script> -->
+    
+
+</head>
+<body>
+    <div class="loading">
+        <div class="pace">
+            <div class="pace_left circle">
+                <div class="small_left circleProgress"></div>
+            </div> 
+            <div class="pace_right circle">
+                <div class="small_right circleProgress"></div>
+            </div>
+            <div class="money_icon"><img src="images/money_icon.png"/></div>
+        </div>
+        <div class="pace_progress"><span>0</span>%</div>
+    </div>
+
+    
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <!-- 第一页 -->
+            <section class="swiper-slide page  bg start bg_initial swiper-no-swiping page1">
+                <div class="page1_top pos_initial bg_initial"></div>
+                <div class="content pos_initial bg_initial">
+                    <h3>你对中国人的[钱途]有多了解？</h3>
+                    <p>2017年两会特别策划-价格与收入-</p>
+                </div>
+                <a class="start_icon pos_initial bg_initial"></a>
+                <div class="page1_bottom pos_initial bg_initial"></div>
+            </section>
+            
+            <!-- 第二页 -->
+            <section class="swiper-slide page bg page2 swiper-no-swiping">
+                <div class="triangle_bg">
+                    <i class="triangle_top pos_initial"></i>
+                    <i class="triangle_right pos_initial"></i>
+                    <i class="triangle_bottom pos_initial"></i>
+                    <i class="triangle_left pos_initial"></i>
+                </div>
+                <div class="content">
+                    <p>每个春天的两会就像是中国人的“政治春节”，时政新闻在这11天刷屏，这里有过去一年国家的奋斗与求索，也关乎每个普通人的前途和命运。每次变革的喜忧，似乎都要落实在中国人的“钱途”才令人瞩目，我们关心政治也是希冀：“未来的日子能过得更好一点。”</p>
+                </div>
+                <a  class="start_answer bg_initial">开始答题</a>
+            </section>
+
+            <!-- 第三页 -->
+            <section class="swiper-slide page bg page3 swiper-no-swiping">
+                <div class="triangle_bg">
+                    <i class="triangle_top pos"></i>
+                    <i class="triangle_right1 pos"></i>
+                    <i class="triangle_right2 pos"></i>
+                    <i class="triangle_bottom pos"></i>     
+                    <i class="triangle_left1 pos"></i>
+                    <i class="triangle_left2 pos"></i>        
+                </div>
+                <div class="topic">
+                    <div class="topic_city"><span>GDP国力</span></div>
+                    <div class="topic_income"><span>收入</span></div>
+                    <div class="topic_pool"><span>扶贫</span></div>
+                    <div class="topic_price"><span>物价</span></div>
+                    <div class="topic_home"><span>房价</span></div>
+                    <div class="topic_taxes"><span>税费</span></div>
+                    <div class="topic_civil"><span>公务员</span></div>
+                    <div class="topic_web"><span>互联网</span></div>
+                    <div class="topic_insurance"><span>五险一金</span></div>
+                    <div class="topic_medical"><span>医疗</span></div>
+                </div>
+            </section>
+
+            <!-- 第四页 -->
+            <section class="swiper-slide page page4 swiper-no-swiping">
+                <div class="content">2015年，“被平均”后我们每人为国家创造了多少GDP？</div>
+                <div class="select_number">
+                    <div class="change_number">
+                        <div class="change_num_ini"><span class="num">20000元</span></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="initial">
+                        <span class="min_initial">20000元</span>
+                        <span class="max_initial">80000元</span>
+                    </div>
+                    <div class="scroll" id="scroll">
+                        <div class="slide_btn" id="slide_btn"><span></span></div>
+                        <div class="slide_bar" id="slide_bar"></div>
+                    </div>
+                    <div class="description">
+                        <a class="web_icon"></a>
+                        <p>滑动滑块选择你认为可能的数值</p>
+                    </div>
+                </div>
+                <div class="result_number">
+                    <div class="initial">
+                        <span class="min_initial">20000元</span>
+                        <span class="max_initial">80000元</span>
+                    </div>
+                    <div class="select_content">
+                        <div class="scroll">
+
+                            <div class="slide_bar_right">
+                                <div class="changeList_right">
+                                    <div class="slide_btn_right diamond">
+                                        <span class="tri"></span>
+                                        <div class="change_num_ini">
+                                            <span class="num">49992</span>元
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+
+                            <div class="slide_bar_user">
+                                <div class="changeList_user">
+                                    <div class="slide_btn_right diamond">
+                                        <span class="tri"></span>
+                                        <div class="change_num_ini">
+                                            <span class="num">599</span>元
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                </div>  
+                            </div>
+
+                            <div class="slide_bar_other">
+                                <div class="changeList_other">
+                                    <div class="slide_btn_right diamond">
+                                        <span class="tri"></span>
+                                        <div class="change_num_ini">
+                                            <span class="num">1999</span>元
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                </div>
+                            </div> 
+
+                        </div>
+                        
+                    </div>
+                    <ul class="description">
+                        <li class="slide_btn_right">
+                            <div class="diamond"><span class="tri"></span></div>正确答案
+                        </li>
+                        <li class="slide_btn_user">
+                            <div class="diamond"><span class="tri"></span></div>你的答案
+                        </li>
+                        <li class="slide_btn_other">
+                            <div class="diamond"><span class="tri"></span></div>其他用户答案
+                        </li>
+                    </ul>
+                </div>
+                <div class="button_group">
+                    <a class="comeback" >返回</a>
+                    <a class="checkout">确认</a>
+                    <a class="share">一起猜</a>
+                </div>
+            </section>
+
+            <!-- 第五页 -->
+            <section class="swiper-slide page page5 swiper-no-swiping">
+                <div class="result">
+                    <div class="left_fraction">
+                        <p class="title">您的得分为</p>
+                        <h4>54</h4>
+                        <p class="last">满分100分</p>
+                    </div>
+                    <div class="right_score">
+                        <p class="title">您对物价的了解为</p>
+                        <img src="images/result_01.png" alt="" />
+                    </div>
+                </div>
+                <div class="content">
+                    民生问题绕不开一个“钱”字，<br/>
+                    分配好国民经济这块“蛋糕”，<br/>
+                    才能让大家的“钱途”越来越好。
+                </div>
+                <div class="description">
+                    <a class="share">分享</a>
+                    <ul class="product">
+                        <li>制作人员</li>
+                        <li>策划／Frozena Laura</li>
+                        <li>设计／Raphael</li>
+                        <li>制作／安安</li>
+                    </ul>
+                </div>
+                
+            </section>            
+
+        </div>
+    </div>
+
+    <!-- 分享 -->
+    <section class="share_wechat">
+        <p>微信用户点击右上角</p>
+        <p class="last">分享到朋友圈</p>
+    </section>
+    
+
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/swiper-3.4.1.jquery.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
